@@ -1,0 +1,16 @@
+# Virtual Environment
+bertaav_env/
+.venv/
+.env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local Data Storage
+Data/images/
+Data/raw_pdfs/
+
+# IDE/Editor settings
+.vscode/
+.DS_Store
