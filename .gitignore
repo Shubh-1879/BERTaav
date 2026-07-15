@@ -8,8 +8,13 @@ __pycache__/
 *.pyc
 
 # Local Data Storage
-Data/images/
-Data/raw_pdfs/
+
+staging_pdfs/
+sample_downloads/
+progress.sqlite3
+logs/
+Data/
+
 
 # IDE/Editor settings
 .vscode/
