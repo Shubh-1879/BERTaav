@@ -1,7 +1,22 @@
+# Virtual Environment
+bertaav_env/
+.venv/
+.env/
+
+# Python cache
+__pycache__/
+*.pyc
+# Local Data Storage
+staging_pdfs/
+sample_downloads/
+progress.sqlite3
 logs/
+Data/
+# IDE/Editor settings
+.vscode/
+.DS_Storelogs/
 backup/
 data
 *.npy
 *.jsonl
 *.csv
-__pycache__/
