@@ -14,7 +14,8 @@ logs/
 Data/
 # IDE/Editor settings
 .vscode/
-.DS_Storelogs/
+.DS_Store
+logs/
 backup/
 data
 *.npy
