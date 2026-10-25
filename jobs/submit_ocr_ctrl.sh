@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N ocr_ctrl
+#PBS -q gpu
+#PBS -l select=1:ncpus=8:naccelerators=1
+#PBS -l walltime=00:30:00
+#PBS -j oe
+#PBS -o logs/
+source /apps/compilers/anaconda3-23.07.0/etc/profile.d/conda.sh
+conda activate /storage/shubham.agarwal_phd24/envs/dapt
+cd /home/shubham.agarwal_phd24/projects/BERTaav
+export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 NCPUS=8
+export HF_HUB_CACHE=/storage/shubham.agarwal_phd24/hf_cache/hub
+python scripts/ocr_control.py eval \
+  base=ai4bharat/IndicBERTv2-MLM-only \
+  dapt=/storage/shubham.agarwal_phd24/models/bertaav_dapt_300M \
+  generic=/storage/shubham.agarwal_phd24/models/bertaav_generic_300M

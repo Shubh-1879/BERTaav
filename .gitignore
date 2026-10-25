@@ -1,0 +1,7 @@
+logs/
+backup/
+data
+*.npy
+*.jsonl
+*.csv
+__pycache__/
