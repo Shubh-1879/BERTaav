@@ -19,7 +19,7 @@ from datetime import datetime
 # ── Config ────────────────────────────────────────────────────────────────────
 ROOT = os.environ.get(
     "BERTAAV_ROOT",
-    "/home/shubham.agarwal_phd24/projects/BERTaav"
+    "/home/USER/projects/BERTaav"
 )
 
 RAW_PDFS_DIR   = os.path.join(ROOT, "data", "raw_pdfs")

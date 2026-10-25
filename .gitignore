@@ -21,3 +21,5 @@ data
 *.npy
 *.jsonl
 *.csv
+*.sqlite3
+*.log

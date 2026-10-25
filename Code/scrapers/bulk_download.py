@@ -66,10 +66,10 @@ USAGE ON YOUR LAPTOP (this script no longer runs on the HPC):
     #
     #      ssh-keygen -t ed25519          # if you don't already have a key
     #                                      # (press Enter through the prompts)
-    #      ssh-copy-id shubham.agarwal_phd24@10.1.4.95
+    #      ssh-copy-id USER@HPC_HOST
     #
     #    Then test that this works with NO password prompt:
-    #      ssh shubham.agarwal_phd24@10.1.4.95 "echo connected ok"
+    #      ssh USER@HPC_HOST "echo connected ok"
     #
     #    If ssh-copy-id isn't available (e.g. on Windows/PowerShell without
     #    it installed), manually append the contents of your local
@@ -78,7 +78,7 @@ USAGE ON YOUR LAPTOP (this script no longer runs on the HPC):
     # 3. Edit the HPC_* settings below (host, user, remote path) to match
     #    your setup -- they're already filled in based on what you've told
     #    me, but double check the remote path exists:
-    #      ssh shubham.agarwal_phd24@10.1.4.95 "mkdir -p ~/projects/BERTaav/data/raw_pdfs"
+    #      ssh USER@HPC_HOST "mkdir -p ~/projects/BERTaav/data/raw_pdfs"
 
     # 4. Run it. Just let it run in a terminal -- on Windows this means
     #    keeping the terminal window open (or use Windows Terminal / WSL +
@@ -137,11 +137,11 @@ VERIFY_SIZE = True
 # deleted locally once confirmed transferred. This keeps laptop disk usage
 # bounded regardless of total corpus size.
 HPC_USER = os.environ.get("SANSAD_HPC_USER", "shubham.agarwal_phd24")
-HPC_HOST = os.environ.get("SANSAD_HPC_HOST", "10.1.4.95")
+HPC_HOST = os.environ.get("SANSAD_HPC_HOST", "HPC_HOST")
 HPC_REMOTE_DIR = os.environ.get("SANSAD_HPC_DIR", "projects/BERTaav/data/raw_pdfs")
 # ^ relative to the HPC user's home directory, since that's how you described it.
 #   Use an absolute path here instead if you'd rather be explicit, e.g.
-#   "/home/shubham.agarwal_phd24/projects/BERTaav/data/raw_pdfs"
+#   "/home/USER/projects/BERTaav/data/raw_pdfs"
 
 SYNC_INTERVAL_SECONDS = int(os.environ.get("SANSAD_SYNC_INTERVAL", "300"))  # every 5 min
 SYNC_ENABLED = os.environ.get("SANSAD_SYNC_ENABLED", "1") != "0"  # set to 0 to disable, e.g. for local-only testing

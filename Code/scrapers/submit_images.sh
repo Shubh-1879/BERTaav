@@ -5,13 +5,13 @@
 #PBS -q cpu                         # adjust to your enabled queue
 #PBS -o logs/pdf_to_images_^array_index^.log
 #PBS -e logs/pdf_to_images_^array_index^.err
-#PBS -M shubham.agarwal_phd24@ashoka.edu.in
+#PBS -M you@example.com
 #PBS -m ae
 
 module load compiler/anaconda3
 source activate tesseract_env
 
-cd /home/shubham.agarwal_phd24/projects/BERTaav
+cd /home/USER/projects/BERTaav
 
 echo "=== Job ${PBS_JOBID} | Array index ${PBS_ARRAY_INDEX} | $(date) ==="
 

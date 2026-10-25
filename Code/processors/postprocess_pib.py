@@ -39,7 +39,7 @@ USAGE:
 
   # Then rsync cleaned files to HPC:
   rsync -av --remove-source-files Data/pib_clean/ \\
-        shubham.agarwal_phd24@10.1.4.95:projects/BERTaav/data/pib_clean/
+        USER@HPC_HOST:projects/BERTaav/data/pib_clean/
 
 OUTPUT:
   Data/pib_clean/  — same shard structure as pib_raw, cleaned JSONs
@@ -414,7 +414,7 @@ def main():
         print(f"Clean files → {clean_dir}")
         print(f"\nNext step — rsync to HPC:")
         print(f"  rsync -av Data/pib_clean/ \\")
-        print(f"    shubham.agarwal_phd24@10.1.4.95:"
+        print(f"    USER@HPC_HOST:"
               f"projects/BERTaav/data/pib_clean/")
 
 
